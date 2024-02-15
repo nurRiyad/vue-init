@@ -3,7 +3,14 @@ import IconCopyVue from './icons/IconCopy.vue';
 
 function handleCopy() {
   navigator.clipboard.writeText(
-    '\n git clone git@github.com:nurRiyad/vue-init.git \n cd vue-init \n ./script.sh  \n npm install \n code . && npm run dev'
+    `
+git clone git@github.com:nurRiyad/vue-init.git
+cd vue-init
+rm -rf .git && git init && git add .
+git commit -s -m "Initial Commit"
+npm install
+code . && npm run dev
+`
   );
 }
 </script>
@@ -30,7 +37,8 @@ function handleCopy() {
       <div>
         <p>git clone git@github.com:nurRiyad/vue-init.git</p>
         <p>cd vue-init</p>
-        <p>./script.sh</p>
+        <p>rm -rf .git && git init && git add .</p>
+        <p>git commit -s -m "Initial Commit"</p>
         <p>npm install</p>
         <p>code . && npm run dev</p>
       </div>
