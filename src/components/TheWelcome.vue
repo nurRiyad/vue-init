@@ -1,4 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import IconCopyVue from './icons/IconCopy.vue';
+
+function handleCopy() {
+  navigator.clipboard.writeText(
+    '\n git clone git@github.com:nurRiyad/vue-init.git \n cd vue-init \n npm install \n code . && npm run dev'
+  );
+}
+</script>
 
 <template>
   <div class="flex flex-col justify-center items-center pt-20">
@@ -16,6 +24,18 @@
         <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">EsLint</li>
         <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">Prettier</li>
       </ul>
+    </div>
+
+    <div class="flex items-end font-mono p-6 m-10 bg-gray-300 rounded-lg">
+      <div>
+        <p>git clone git@github.com:nurRiyad/vue-init.git</p>
+        <p>cd vue-init</p>
+        <p>npm install</p>
+        <p>code . && npm run dev</p>
+      </div>
+      <div @click="handleCopy">
+        <IconCopyVue class="w-6 cursor-pointer hover:scale-105 transition-all" />
+      </div>
     </div>
   </div>
 </template>
