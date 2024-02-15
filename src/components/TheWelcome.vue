@@ -10,7 +10,7 @@ rm -rf .git && git init && git add .
 git commit -s -m "Initial Commit"
 npm install
 code . && npm run dev
-`
+    `
   );
 }
 </script>
