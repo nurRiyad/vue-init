@@ -10,6 +10,7 @@ This boilerplate should help get you started developing with Vue 3 in Vite.
 - TailwindCss
 - Eslint
 - Prettier
+- Vite dev tool
 
 ## Recommended IDE setup
 
@@ -22,12 +23,6 @@ This boilerplate should help get you started developing with Vue 3 in Vite.
 - Volar
 - Spell Checker
 
-## Takeover mode for performance
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
 ## Project Setup
 
