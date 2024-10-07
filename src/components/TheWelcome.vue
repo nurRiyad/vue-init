@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import IconCopyVue from './icons/IconCopy.vue';
+import data from '../../package.json';
+import TheGithub from './icons/TheGithub.vue';
 
 function handleCopy() {
   navigator.clipboard.writeText(
@@ -22,14 +24,37 @@ code . && npm run dev
       <p class="text-green-700 pt-3">A simple boilerplate for vue.js to start building quickly</p>
     </div>
     <div>
-      <ul class="flex space-x-4">
-        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">Vue</li>
-        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">Pinia</li>
-        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">Vue Router</li>
-        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">TailwindCss</li>
-        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">VueUse</li>
-        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">EsLint</li>
-        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">Prettier</li>
+      <ul class="flex gap-4 flex-wrap max-w-5xl justify-center items-center">
+        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">
+          Vue {{ data.dependencies.vue }}
+        </li>
+        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">
+          Vite {{ data.devDependencies.vite }}
+        </li>
+        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">
+          Pinia {{ data.dependencies.pinia }}
+        </li>
+        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">
+          Vue Router {{ data.dependencies['vue-router'] }}
+        </li>
+        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">
+          TailwindCss {{ data.devDependencies.tailwindcss }}
+        </li>
+        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">
+          VueUse {{ data.dependencies['@vueuse/core'] }}
+        </li>
+        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">
+          Typescript {{ data.devDependencies.typescript }}
+        </li>
+        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">
+          EsLint {{ data.devDependencies.tailwindcss }}
+        </li>
+        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">
+          Prettier {{ data.devDependencies.prettier }}
+        </li>
+        <li class="p-4 bg-green-700 text-white rounded-md hover:scale-110 transition-all">
+          DevTool {{ data.devDependencies['vite-plugin-vue-devtools'] }}
+        </li>
       </ul>
     </div>
 
@@ -45,6 +70,10 @@ code . && npm run dev
       <div @click="handleCopy">
         <IconCopyVue class="w-6 cursor-pointer hover:scale-105 transition-all" />
       </div>
+    </div>
+
+    <div>
+      <a href="https://github.com/nurRiyad/vue-init"><TheGithub /></a>
     </div>
   </div>
 </template>
